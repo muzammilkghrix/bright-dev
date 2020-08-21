@@ -12,6 +12,9 @@ import imageo3 from "./imageo3.png"
 import imageo4 from "./imageo4.png"
 import imageo5 from "./imageo5.png"
 import tick from "./tick-new.png"
+import leftArrow from "./L-arrow-n.png"
+import rightArrow from "./R-arrow-n.png"
+import quotes from "./quotes.png"
 
 export {
   tick,
@@ -28,4 +31,7 @@ export {
   imageo3,
   imageo4,
   imageo5,
+  leftArrow,
+  rightArrow,
+  quotes,
 }

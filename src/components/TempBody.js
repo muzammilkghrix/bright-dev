@@ -11,6 +11,7 @@ import {
   i3,
   tick,
 } from "../assets/img/icons"
+import SimpleSlider from "./Slider"
 
 export const TempBody = () => {
   return (
@@ -328,7 +329,8 @@ export const TempBody = () => {
               <span>Testimonials </span>{" "}
               <span className="trust-text">From our Trusted Client</span>
             </h2>
-            <div className="demo">
+            <SimpleSlider />
+            {/* <div className="demo">
               <div className="">
                 <div className="row">
                   <div className="col-md-12">
@@ -470,7 +472,7 @@ export const TempBody = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
