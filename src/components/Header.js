@@ -1,81 +1,56 @@
 import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import Menu from "./Menu"
-import ToggleIcon from "../assets/svg/toggle.inline.svg"
+import logo from "../assets/img/logo.png"
+import { Link } from "gatsby"
 
-const Header = ({ pageContext, toggleBackdrop, ...props }) => {
-  const { wp } = useStaticQuery(graphql`
-    {
-      wp {
-        generalSettings {
-          title
-          description
-        }
-      }
-    }
-  `)
+export const Header = () => {
   return (
-    <header id="site-header" className="header-footer-group" role="banner">
-      <div className="header-inner section-inner">
-        <div className="header-titles-wrapper">
-          <div className="header-titles">
-            <h1 className="site-title">
-              <Link
-                to="/"
-                dangerouslySetInnerHTML={{ __html: wp.generalSettings.title }}
-              />
-            </h1>
-            <div
-              className="site-description"
-              dangerouslySetInnerHTML={{
-                __html: wp.generalSettings.description,
-              }}
-            />
-          </div>
-
-          <button
-            className="toggle nav-toggle mobile-nav-toggle"
-            data-toggle-target=".menu-modal"
-            data-toggle-body-class="showing-menu-modal"
-            aria-expanded="false"
-            data-set-focus=".close-nav-toggle"
-            onClick={(e) => toggleBackdrop(e, true)}
-          >
-            <span className="toggle-inner">
-              <span className="toggle-icon">
-                <ToggleIcon />
-              </span>
-              <span className="toggle-text">Menu</span>
-            </span>
-          </button>
-        </div>
-
-        <div className="header-navigation-wrapper">
-          <Menu />
-
-          <div className="header-toggles hide-no-js">
-            <div className="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
-              <button
-                className="toggle nav-toggle desktop-nav-toggle"
-                data-toggle-target=".menu-modal"
-                data-toggle-body-class="showing-menu-modal"
-                aria-expanded="false"
-                data-set-focus=".close-nav-toggle"
-                onClick={(e) => toggleBackdrop(e, true)}
-              >
-                <span className="toggle-inner">
-                  <span className="toggle-text">Menu</span>
-                  <span className="toggle-icon">
-                    <ToggleIcon />
-                  </span>
-                </span>
-              </button>
-            </div>
+    <nav className="navbar navbar-expand-sm bg-dark-1 navbar-dark">
+      <img className="l-img" src={logo} />
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="f12 collapse navbar-collapse" id="collapsibleNavbar">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            {/* <a className="nav-link nav-link-1" href="#">
+              Work
+            </a> */}
+            <Link to={"/blog"} className="nav-link nav-link-1">
+              Work
+            </Link>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link nav-link-1" href="#">
+              Services
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link nav-link-1" href="#">
+              Resources
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link nav-link-1" href="#">
+              People
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link nav-link-1" href="#">
+              Join
+            </a>
+          </li>
+        </ul>
+        <div className="ipad">
+          <div className="header-module">
+            <button className="custm-butt">Contact Us</button>
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   )
 }
-
-export default Header

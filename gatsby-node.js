@@ -23,7 +23,7 @@ exports.createPages = async (props) => {
   `)
 
   const perPage = wpSettings.wp.readingSettings.postsPerPage || 10
-  const blogURI = "/"
+  const blogURI = "/blog"
   const templates = getTemplates()
 
   await createContentTypes(props, { templates })

@@ -1,42 +1,29 @@
-import React, { useState } from "react"
-import Header from "./Header"
-import Footer from "./Footer"
+import React from "react"
+import { Header } from "./Header"
+import { Footer } from "./Footer"
+import { TempBody } from "./TempBody"
+import { Helmet } from "react-helmet"
 
-import FooterMenusWidgets from "./FooterMenusWidgets"
-import MenuModal from "./MenuModal"
-
-const backdropClasses = " backdrop"
-
-const Layout = ({ children, bodyClass }) => {
-  const [backdropActive, setBackdropActive] = useState(false)
-
-  const toggleBackdrop = (e, active) => {
-    e.preventDefault()
-    setBackdropActive(active)
-  }
-
+export const Layout = ({ children }) => {
   return (
-    <div
-      id={"GatsbyBody"}
-      className={
-        bodyClass +
-        " showing-menu-modal showing-modal" +
-        (backdropActive ? backdropClasses : "")
-      }
-    >
-      <Header toggleBackdrop={toggleBackdrop} />
-
-      <MenuModal isActive={backdropActive} toggleBackdrop={toggleBackdrop} />
-
-      <main id="site-content" role="main">
-        {children}
-      </main>
-
-      <FooterMenusWidgets />
-
+    <div>
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
+        />
+      </Helmet>
+      <Header />
+      {children}
       <Footer />
     </div>
   )
 }
-
-export default Layout

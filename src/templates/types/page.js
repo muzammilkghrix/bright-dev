@@ -1,18 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../../components/Layout"
-import Seo from "../../components/Seo"
-import FeaturedMedia from "../../components/FeaturedMedia"
+import { Layout } from "../../components/Layout"
+//import Seo from "../../components/Seo"
+//import FeaturedMedia from "../../components/FeaturedMedia"
 
 export default ({ data }) => {
   const { page } = data
   const { title, content, featuredImage, excerpt, databaseId } = page
-
+  console.log("from template>types>page")
   return (
     <Layout
       bodyClass={`page-template-default page page-id-${databaseId} wp-embed-responsive singular missing-post-thumbnail has-no-pagination not-showing-comments footer-top-visible customize-support`}
     >
-      <Seo title={title} description={excerpt} />
+      {/* <Seo title={title} description={excerpt} /> */}
 
       <article
         className={`post-${databaseId} post page type-page status-publish hentry`}
@@ -27,7 +27,7 @@ export default ({ data }) => {
           </div>
         </header>
 
-        <FeaturedMedia image={featuredImage} />
+        {/* <FeaturedMedia image={featuredImage} /> */}
 
         <div className="post-inner thin">
           <div

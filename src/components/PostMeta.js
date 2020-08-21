@@ -1,8 +1,8 @@
 import React from "react"
-import AuthorIcon from "../assets/svg/author.inline.svg"
+//import AuthorIcon from "../assets/svg/author.inline.svg"
 import { Link } from "gatsby"
-import DateIcon from "../assets/svg/date.inline.svg"
-import CommentIcon from "../assets/svg/comment.inline.svg"
+//import DateIcon from "../assets/svg/date.inline.svg"
+//import CommentIcon from "../assets/svg/comment.inline.svg"
 
 const PostMeta = ({ author, title, date }) => {
   author = author?.node
@@ -12,7 +12,7 @@ const PostMeta = ({ author, title, date }) => {
         <li className="post-author meta-wrapper">
           <span className="meta-icon">
             <span className="screen-reader-text">Post author</span>
-            <AuthorIcon />
+            {/* <AuthorIcon /> */}
           </span>
           <span className="meta-text">
             By{" "}
@@ -28,14 +28,12 @@ const PostMeta = ({ author, title, date }) => {
         <li className="post-date meta-wrapper">
           <span className="meta-icon">
             <span className="screen-reader-text">Post date</span>
-            <DateIcon />
+            {/* <DateIcon /> */}
           </span>
           <span className="meta-text">{date}</span>
         </li>
         <li className="post-comment-link meta-wrapper">
-          <span className="meta-icon">
-            <CommentIcon />
-          </span>
+          <span className="meta-icon">{/* <CommentIcon /> */}</span>
           <span className="meta-text">
             <a href="#respond">
               {/*TODO: Dynamic comments*/}

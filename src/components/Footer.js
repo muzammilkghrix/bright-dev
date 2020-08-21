@@ -1,43 +1,147 @@
 import React from "react"
-import { Link } from "gatsby"
+import { footerLogo } from "../assets/img/icons"
 
-const Footer = ({}) => {
+export const Footer = () => {
   return (
-    <footer id="site-footer" role="contentinfo" className="header-footer-group">
-      <div className="section-inner">
-        <div className="footer-credits">
-          <p className="footer-copyright">
-            © {new Date().getFullYear()}{" "}
-            <Link to={"/"}>Gatsby Starter WordPress Twenty Twenty</Link>
-          </p>
-          <p>
-            <a
-              className="powered-by-wordpress"
-              href="https://www.henrikwirth.com"
-              rel="noreferrer noopener"
-            >
-              Proudly presented by Henrik Wirth
-            </a>
-          </p>
+    <div className="jumbotron text-center" style={{ marginBottom: "0" }}>
+      <section id="footer">
+        <div className="col-md-12">
+          <div className="row text-center text-xs-center text-sm-left text-md-left">
+            <div className="col-xs-12 col-sm-4 col-md-2">
+              <img className="F-logo" src={footerLogo} />
+            </div>
+            <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
+              <h5>Welcome</h5>
+              <ul className="list-unstyled quick-links">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
+              <h5>Work</h5>
+              <ul className="list-unstyled quick-links">
+                <li>
+                  <a href="#">Industry</a>
+                </li>
+                <li>
+                  <a href="#">Industry</a>
+                </li>
+                <li>
+                  <a href="#">Industry</a>
+                </li>
+                <li>
+                  <a href="#">Industry</a>
+                </li>
+                <li>
+                  <a href="#">Industry</a>
+                </li>
+                <li>
+                  <a href="#">Industry</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
+              <h5>Resources</h5>
+              <ul className="list-unstyled quick-links">
+                <li>
+                  <a href="#">SEO</a>
+                </li>
+                <li>
+                  <a href="#">SEO</a>
+                </li>
+                <li>
+                  <a href="#">SEO</a>
+                </li>
+                <li>
+                  <a href="#">SEO</a>
+                </li>
+                <li>
+                  <a href="#">SEO</a>
+                </li>
+                <li>
+                  <a href="#">SEO</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
+              <h5>Peoples</h5>
+              <ul className="list-unstyled quick-links">
+                <li>
+                  <a href="#">Leadership</a>
+                </li>
+                <li>
+                  <a href="#">our values</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
+              <h5>Join</h5>
+              <ul className="list-unstyled quick-links">
+                <li>
+                  <a href="#">Opertunities</a>
+                </li>
+                <li>
+                  <a href="#">internship</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
+              <h5>Contact</h5>
+              <ul className="list-unstyled quick-links">
+                <li>
+                  <a href="#">Hours</a>
+                </li>
+                <li>
+                  <a href="#">9am to 5pm EST</a>
+                </li>
+                <li>
+                  <a href="#">Monday to Saturday</a>
+                </li>
+                <ul className="list-unstyled quick-links">
+                  <h5
+                    style={{
+                      marginBottom: "0px",
+                      paddingBottom: "0px",
+                      marginTop: "20px",
+                    }}
+                  >
+                    Social
+                  </h5>
+                  <li>
+                    <a href="#">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="#">Facebook</a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2  text-white">
+              <p>
+                <u style={{ textDecoration: "none" }}>
+                  <a href="#">
+                    ©2020 Bright Development LLC. All Rights Reserved. 666th
+                    Street, Nowwhere, NW 11111
+                  </a>
+                </u>
+              </p>
+              <p className="h6">
+                <span className="t-c">
+                  <a href="#"></a>Terms and Conditions
+                </span>
+                <span className="t-c">Privacy policy</span>
+              </p>
+            </div>
+            <hr />
+          </div>
         </div>
-
-        <a className="to-the-top" href="#site-header">
-          <span className="to-the-top-long">
-            To the top{" "}
-            <span className="arrow" aria-hidden="true">
-              ↑
-            </span>
-          </span>
-          <span className="to-the-top-short">
-            Up{" "}
-            <span className="arrow" aria-hidden="true">
-              ↑
-            </span>
-          </span>
-        </a>
-      </div>
-    </footer>
+      </section>
+    </div>
   )
 }
-
-export default Footer
