@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import url('https://db.onlinewebfonts.com/c/42441faa9c7c255068f6dd0c33ca2ba5?family=SofiaPro-SemiBold');
+
+
+/* 
+@font-face {
+    font-family: "Sofia Pro Semi Bold";
+    src: url("//db.onlinewebfonts.com/t/42441faa9c7c255068f6dd0c33ca2ba5.eot");
+    src: url("//db.onlinewebfonts.com/t/42441faa9c7c255068f6dd0c33ca2ba5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/42441faa9c7c255068f6dd0c33ca2ba5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/42441faa9c7c255068f6dd0c33ca2ba5.woff") format("woff"), url("//db.onlinewebfonts.com/t/42441faa9c7c255068f6dd0c33ca2ba5.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/42441faa9c7c255068f6dd0c33ca2ba5.svg#Sofia Pro Semi Bold") format("svg");
+} */
+
+@font-face {
+    font-family: "niveau_groteskregular";
+    src: url("../fonts/niveau_grotesk_regular-webfont.woff");
+}
 
 @font-face {
     font-family: "SofiaPro-SemiBold";
-    src: url("../fonts/niveau_grotesk_medium-webfont.woff");
+    src: url("../fonts/Sofia.ttf");
+}
+
+@font-face {
+    font-family: "helvetica_neuebold";
+    src: url("../fonts/fontsfree-net-helvetica-75-bold-outline-587ebe00b76ba.woff");
 }
 
 .card-body {
@@ -18,6 +35,9 @@ body {
     color: #808291;
 }
 
+.service-font {
+    font-family: "SofiaPro-SemiBold" !important;
+}
 
 /*navbar-sec*/
 
@@ -681,7 +701,7 @@ section .section-title {
     .st-desc {
         color: #5b6670;
         font-size: 20px;
-        font-family: niveaugroteskregular !important;
+        font-family: "niveaugroteskregular" !important;
         margin-bottom: 2.5em;
     }
 

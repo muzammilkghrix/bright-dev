@@ -82,7 +82,7 @@ export const Footer = () => {
               <h5>Join</h5>
               <ul className="list-unstyled quick-links">
                 <li>
-                  <a href="#">Opertunities</a>
+                  <a href="#">Opportunities</a>
                 </li>
                 <li>
                   <a href="#">internship</a>
