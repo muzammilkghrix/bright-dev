@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-wordpress-twenty-twenty",
-  "description": "Gatsby port of the WordPress Twenty Twenty theme.",
+  "name": "bright-development-gatsby",
+  "description": "Gatsby site with wordpress cms.",
   "license": "SEE LICENSE IN <LICENSE>",
   "version": "0.0.1",
   "author": {
-    "name": "Henrik Wirth",
-    "email": "info@henrikwirth.de"
+    "name": "ghrix technologies",
+    "email": "info@ghrix.com"
   },
   "scripts": {
     "develop": "gatsby develop",

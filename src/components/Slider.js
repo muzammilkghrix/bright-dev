@@ -43,7 +43,7 @@ function SampleNextArrow(props) {
 class SimpleSlider extends React.Component {
   render() {
     var settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
