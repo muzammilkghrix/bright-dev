@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family: "niveau_groteskmedium";
+    src: url("../fonts/niveau_grotesk_medium-webfont.woff");
+}
+
+@font-face {
     font-family: "SofiaPro-SemiBold";
     src: url("../fonts/Sofia.ttf");
 }
@@ -70,6 +75,7 @@ body {
 img.l-img {
     width: 100%;
     max-width: 120pt;
+    margin-left: 20px;
 }
 
 button.btn.btn-lg.r-20 {
@@ -115,6 +121,7 @@ h1.h-head {
     color: #5b6670;
     font-size: 16px;
     margin-bottom: 1em;
+    font-family: "niveau_groteskmedium";
 }
 
 button.custm-buttton {
@@ -125,7 +132,7 @@ button.custm-buttton {
     background-color: blue;
     color: white !important;
     font-size: 22px !important;
-    font-family: sofiasemibold;
+    font-family: "SofiaPro-SemiBold";
     font-weight: normal !important;
     border: 0px !important;
 }
@@ -141,13 +148,16 @@ button.custm-buttton {
 }
 
 /*tabs section*/
+.nav-tabs {
+    margin: 0px 20px;
+}
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
     border-radius: 0px !important;
     border: 4px solid #d3d3d6;
     font-size: 24px;
-    font-family: sofiasemibold !important;
+    font-family: "SofiaPro-SemiBold" !important;
     font-weight: normal !important;
     color: #3f3a60 !important;
     background-color: #d0d0d2 !important;
@@ -210,6 +220,9 @@ input#email {
 input#mail {
     border-radius: 0px !important;
     padding: 30px;
+    font-family: "niveau_groteskregular";
+    color: #655dc6;
+    font-size: 18px;
 }
 
 span.input-group-text {
@@ -248,14 +261,41 @@ span.input-group-text {
     font-size: 28px;
 }
 
+
+/* gradient animation */
+@keyframes gradient {
+    0% {
+        background-position: 100% 50%;
+        background-size: 400% 400%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+        background-size: 400% 400%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+        background-size: 400% 400%;
+    }
+}
+
 .custm-butt {
-    background: url(../img/imgpsh_fullsize_anim.png) no-repeat center;
-    background-size: cover !important;
+    /*  background: url(../img/imgpsh_fullsize_anim.png) no-repeat center; */
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    background: linear-gradient(120deg, #655dc6, #10cfc9, #007da5, #ce009f, #5b6670);
+    /* background-size: cover !important; */
+    /* background-size: 400% 400%; */
     width: 120px;
     height: 40px;
     border: none;
     color: #fff;
     font-size: 20px;
+
+}
+
+.custm-butt:hover {
+    animation: gradient 15s ease infinite;
 }
 
 .custm-butt:hover,
@@ -270,6 +310,7 @@ span.input-group-text {
 .tabs-p {
     line-height: 25px !important;
     font-family: 'niveau_groteskregular' !important;
+    font-family: "niveau_groteskmedium" !important;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -393,6 +434,7 @@ a.L-Link {
     background-repeat: no-repeat;
     background-position: center left;
     padding: 0 0 0 0px;
+    font-family: 'niveau_groteskmedium' !important;
 }
 
 .col-md-12.serch-sec {
@@ -401,10 +443,18 @@ a.L-Link {
     padding-left: 20px;
     padding-top: 70px !important;
     padding-bottom: 70px !important;
-    background: url(../img/imgpsh_fullsize_anim.png) no-repeat center;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
+    /* background: url(../img/imgpsh_fullsize_anim.png) no-repeat center; */
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    /* background: linear-gradient(120deg, rgba(101, 93, 198, 1) 4%, rgba(16, 207, 201, 1) 52%, rgba(206, 0, 159, 1) 100%); */
+    background: linear-gradient(120deg, #655dc6, #10cfc9, #007da5, #ce009f, #5b6670);
+    /* background-size: 400% 400%; */
+    /* background-position: center !important; */
+    /* background-repeat: no-repeat !important; */
+    /* background-size: cover !important; */
+}
+
+.col-md-12.serch-sec:hover {
+    animation: gradient 15s ease infinite;
 }
 
 span.ld-fh-txt {
@@ -624,6 +674,7 @@ section .section-title {
 
     div#collapsibleNavbar {
         padding-right: 20px !important;
+
     }
 
     .f12 ul {
@@ -878,7 +929,7 @@ section .section-title {
 }
 
 .col-md-12.ux-sec-3 {
-    padding: 60px 15px;
+    padding: 60px 30px;
 }
 
 /*Testimonial code*/
@@ -957,7 +1008,7 @@ section .section-title {
 }
 
 .testimonial .title {
-    font-family: 'niveau_groteskregular' !important;
+    font-family: 'niveau_groteskmedium' !important;
     display: block;
     font-size: 18px;
     color: #d6f7f6;
@@ -973,6 +1024,7 @@ section .section-title {
 
 div#collapsibleNavbar {
     padding-right: 20px;
+    margin-right: 20px;
 }
 
 .testimonial .post {
@@ -1007,6 +1059,7 @@ div#collapsibleNavbar {
     position: absolute;
     bottom: 0px;
     padding-bottom: 20px;
+    font-family: 'niveau_groteskmedium' !important;
 }
 
 .col-md-12.top-sec {
@@ -1024,7 +1077,7 @@ div#collapsibleNavbar {
 
 .col-md-12.ux-sec-2 {
     position: relative;
-    padding: 60px 15px;
+    padding: 60px 20px;
     z-index: 1;
 }
 
@@ -1163,6 +1216,12 @@ i.fa.fa-quote-left:before {
 }
 
 /*placeholder*/
+input::placeholder {
+    color: #655dc6 !important;
+    font-size: 16px;
+    font-family: "niveau_groteskmedium";
+}
+
 input::-webkit-input-placeholder {
     color: #655dc6 !important;
 }
@@ -1180,6 +1239,7 @@ input:-moz-placeholder {
     font-size: 16px;
     font-family: 'niveau_groteskregular' !important;
     padding-left: 0px;
+    font-family: 'niveau_groteskmedium' !important;
 }
 
 
@@ -1189,6 +1249,20 @@ input:-moz-placeholder {
 .tab-content>.active {
     background: unset;
     position: relative;
+}
+
+@keyframes backgroundAnimate {
+    0% {
+        background-position: top right;
+    }
+
+    50% {
+        background-position: bottom right;
+    }
+
+    100% {
+        background-position: top right;
+    }
 }
 
 .sky-round-bg-main {
@@ -1202,6 +1276,10 @@ input:-moz-placeholder {
     background-position: top right;
     object-fit: cover;
     background-size: 1090px;
+}
+
+.sky-round-bg-main:hover {
+    animation: backgroundAnimate 5s ease infinite;
 }
 
 .col-md-12.ux-sec-2 p.tabs-p {
@@ -1245,4 +1323,8 @@ input:-moz-placeholder {
 
 .slick-arrow:hover {
     opacity: 1;
+}
+
+.slick-slider {
+    margin: 0px -15px;
 }
