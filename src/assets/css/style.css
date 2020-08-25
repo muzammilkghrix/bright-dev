@@ -61,7 +61,7 @@ body {
 
 .navbar-dark .navbar-nav .nav-link {
     font-family: "SofiaPro-SemiBold" !important;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     letter-spacing: 0.025em;
     color: #5b6670 !important;
@@ -137,11 +137,25 @@ button.custm-buttton {
     border: 0px !important;
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        background-size: 110%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
 .top-sec {
     background: url(../img/imageo1.png) no-repeat center;
     /* margin: 5% 0 !important; */
     height: 100vh;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+
 
 .tab-content>.active {
     background: url(../img/background-ui.png) no-repeat center;
@@ -1224,14 +1238,20 @@ input::placeholder {
 
 input::-webkit-input-placeholder {
     color: #655dc6 !important;
+    font-size: 16px;
+    font-family: "niveau_groteskmedium";
 }
 
 input:-moz-placeholder {
     color: #655dc6 !important;
+    font-size: 16px;
+    font-family: "niveau_groteskmedium";
 }
 
 :-ms-input-placeholder {
     color: blue !important;
+    font-size: 16px;
+    font-family: "niveau_groteskmedium";
 }
 
 .col-md-8.U-txt {
