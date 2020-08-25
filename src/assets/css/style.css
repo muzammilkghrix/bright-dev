@@ -295,10 +295,11 @@ span.input-group-text {
 }
 
 .custm-butt {
-    /*  background: url(../img/imgpsh_fullsize_anim.png) no-repeat center; */
+    background: url(../img/imgpsh_fullsize_anim.png) no-repeat center;
     /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-    background: linear-gradient(120deg, #655dc6, #10cfc9, #007da5, #ce009f, #5b6670);
-    /* background-size: cover !important; */
+    /* background: linear-gradient(120deg, #655dc6, #10cfc9, #007da5, #ce009f, #5b6670); */
+    background-size: cover;
+    /* !important; */
     /* background-size: 400% 400%; */
     width: 120px;
     height: 40px;
@@ -458,9 +459,10 @@ a.L-Link {
     padding-top: 70px !important;
     padding-bottom: 70px !important;
     /* background: url(../img/imgpsh_fullsize_anim.png) no-repeat center; */
+    background: url(../img/imgpsh_fullsize_anim.png) no-repeat center;
     /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
     /* background: linear-gradient(120deg, rgba(101, 93, 198, 1) 4%, rgba(16, 207, 201, 1) 52%, rgba(206, 0, 159, 1) 100%); */
-    background: linear-gradient(120deg, #655dc6, #10cfc9, #007da5, #ce009f, #5b6670);
+    /* background: linear-gradient(120deg, #655dc6, #10cfc9, #007da5, #ce009f, #5b6670); */
     /* background-size: 400% 400%; */
     /* background-position: center !important; */
     /* background-repeat: no-repeat !important; */
