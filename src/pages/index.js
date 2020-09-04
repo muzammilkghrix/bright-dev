@@ -236,13 +236,13 @@ class Home extends React.Component {
                 className="navbar-toggler"
                 type="button"
                 data-toggle="collapse"
-                data-target="#collapsibleNavbar"
+                data-target="#collapsibleNavbar1"
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div
                 className="f12 collapse navbar-collapse"
-                id="collapsibleNavbar"
+                id="collapsibleNavbar1"
               >
                 <ul className="navbar-nav">
                   <li className="nav-item">
@@ -397,7 +397,7 @@ class Home extends React.Component {
                           />
                         </div>
                         <div className="card-body">
-                          <h4 className="card-title">Crafting the Brand</h4>
+                          <h4 className="card-title new">Crafting the Brand</h4>
                           <p className="card-text">
                             We start by establishing who you are, what you
                             represent, where you want to go, and how we’ll get
@@ -427,7 +427,9 @@ class Home extends React.Component {
                           />
                         </div>
                         <div className="card-body">
-                          <h4 className="card-title">The Perfect Solution</h4>
+                          <h4 className="card-title new">
+                            The Perfect Solution
+                          </h4>
                           <p className="card-text">
                             With a well-crafted brand as your beaker, we create
                             & blend every of your digital experience
@@ -456,7 +458,7 @@ class Home extends React.Component {
                           />
                         </div>
                         <div className="card-body">
-                          <h4 className="card-title">Lift Of</h4>
+                          <h4 className="card-title new">Lift Of</h4>
                           <p className="card-text">
                             It’s time to take your incredible content, socials,
                             and site and share it with the world - and we

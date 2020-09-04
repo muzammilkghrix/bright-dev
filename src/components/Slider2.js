@@ -89,7 +89,7 @@ class SimpleSlider extends React.Component {
       <Slider {...settings}>
         <div>
           <div className="testimonial ">
-            <div className="testimonial-content testimonial-1">
+            <div className="testimonial-content new testimonial-1">
               <div className="testimonial-icon">
                 <img className="Q-class" src={quotes} />
               </div>
@@ -114,7 +114,7 @@ class SimpleSlider extends React.Component {
         </div>
         <div>
           <div className="testimonial ">
-            <div className="testimonial-content testimonial-2">
+            <div className="testimonial-content new testimonial-2">
               <div className="testimonial-icon">
                 <img className="Q-class" src={quoteFilled} />
               </div>
@@ -142,7 +142,7 @@ class SimpleSlider extends React.Component {
         </div>
         <div>
           <div className="testimonial ">
-            <div className="testimonial-content testimonial-3">
+            <div className="testimonial-content new testimonial-3">
               <div className="testimonial-icon">
                 <img className="Q-class" src={quotes} />
               </div>
@@ -171,7 +171,7 @@ class SimpleSlider extends React.Component {
         </div>
         <div>
           <div className="testimonial ">
-            <div className="testimonial-content testimonial-4">
+            <div className="testimonial-content new testimonial-4">
               <div className="testimonial-icon">
                 <img className="Q-class" src={quoteFilled} />
               </div>
@@ -200,7 +200,7 @@ class SimpleSlider extends React.Component {
         </div>
         <div>
           <div className="testimonial ">
-            <div className="testimonial-content testimonial-5">
+            <div className="testimonial-content new testimonial-5">
               <div className="testimonial-icon">
                 <img className="Q-class" src={quotes} />
               </div>
@@ -232,7 +232,7 @@ class SimpleSlider extends React.Component {
         </div>
         <div>
           <div className="testimonial ">
-            <div className="testimonial-content testimonial-6">
+            <div className="testimonial-content new testimonial-6">
               <div className="testimonial-icon">
                 <img className="Q-class" src={quoteFilled} />
               </div>
