@@ -56,11 +56,11 @@ export const Scroller = () => {
         <span className="num-ber">07</span>
         <img className="H-ide" src={navStrock} />
       </Link>
-      <Link className="btn-1" to="/#section-eight">
+      {/*  <Link className="btn-1" to="/#section-eight">
         <span className="txt-nav">Hello!</span>
         <span className="num-ber">08</span>
         <img className="H-ide" src={navStrock} />
-      </Link>
+      </Link> */}
     </Scrollspy>
   )
 }

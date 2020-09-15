@@ -13,23 +13,38 @@ import {
   TestimonialArrow,
   plus,
   footerLogo,
+  iphone,
+  macbook,
 } from "../assets/images/images"
-import Slider from "../components/Slider2"
+import HomeSlider from "../components/HomeSlider"
 import Particles from "react-particles-js"
 import $ from "jquery"
 import { Link } from "gatsby"
 import { Scroller } from "../components/Scroller"
 /* import "../assets/css/style-home.css" */
-
+import Rellax from "rellax"
+/* var rellax = new Rellax(".rellax", {
+  vertical: true,
+})
+ */
 class Home extends React.Component {
   componentDidMount() {
     if (this.props.location.pathname === withPrefix("/")) {
-      require("../assets/css/style-home.css")
+      require("../assets/css/style-home2.css")
       require("../assets/fonts2/stylesheet.css")
     } else {
       console.log("fail")
     }
-
+    $(window).on("load resize scroll", function () {
+      $(".bg-static").each(function () {
+        var windowTop = $(window).scrollTop()
+        var elementTop = $(this).offset().top
+        var rightPosition = windowTop - elementTop + 320 //+ 600
+        $(this).find(".rellax-1").css({ right: rightPosition })
+        let leftPosition = windowTop + elementTop - 20
+        $(this).find(".rellax-2").css({ left: leftPosition })
+      })
+    })
     $({ countNum: $(".code").html() }).animate(
       { countNum: 2520 },
       {
@@ -103,7 +118,7 @@ class Home extends React.Component {
       >
         <Particles
           style={{
-            position: "fixed",
+            position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
@@ -112,7 +127,7 @@ class Home extends React.Component {
           params={{
             particles: {
               number: {
-                value: 15,
+                value: 7,
                 density: {
                   enable: true,
                   value_area: 800,
@@ -154,8 +169,8 @@ class Home extends React.Component {
                 },
               },
               size: {
-                value: 10,
-                random: true,
+                value: 5,
+                random: false,
                 anim: {
                   enable: false,
                   speed: 4,
@@ -231,7 +246,7 @@ class Home extends React.Component {
         <div className="top-sec-new" id="section-one">
           <nav className="navbar navbar-expand-lg navbar-dark ">
             <div className="container-fluid">
-              <img className="l-img" src={logo} alt="logo" />
+              <img className="logo-img" src={logo} alt="logo" />
               <button
                 className="navbar-toggler"
                 type="button"
@@ -290,48 +305,6 @@ class Home extends React.Component {
             </div>
           </nav>
           <Scroller />
-          {/* <div className="sidenav" id="myDIV">
-            <Link className="btn-1 navactive" to="/#section-one">
-              <span className="txt-nav">Hello!</span>
-              <span className="num-ber">01</span>
-              <img className="H-ide" src={navStrock} />
-            </Link>
-            <Link className="btn-1" to="/#section-two">
-              <span className="txt-nav">home</span>
-              <span className="num-ber">02</span>
-              <img className="H-ide" src={navStrock} />
-            </Link>
-            <Link className="btn-1" to="/#section-three">
-              <span className="txt-nav">home</span>
-              <span className="num-ber">03</span>
-              <img className="H-ide" src={navStrock} />
-            </Link>
-            <Link className="btn-1" to="/#section-four">
-              <span className="txt-nav">home</span>
-              <span className="num-ber">04</span>
-              <img className="H-ide" src={navStrock} />
-            </Link>
-            <Link className="btn-1" to="/#section-five">
-              <span className="txt-nav">home</span>
-              <span className="num-ber">05</span>
-              <img className="H-ide" src={navStrock} />
-            </Link>
-            <Link className="btn-1" to="/#section-six">
-              <span className="txt-nav">home</span>
-              <span className="num-ber">06</span>
-              <img className="H-ide" src={navStrock} />
-            </Link>
-            <Link className="btn-1" to="/#section-seven">
-              <span className="txt-nav">home</span>
-              <span className="num-ber">07</span>
-              <img className="H-ide" src={navStrock} />
-            </Link>
-            <Link className="btn-1" to="/#section-eight">
-              <span className="txt-nav">home</span>
-              <span className="num-ber">08</span>
-              <img className="H-ide" src={navStrock} />
-            </Link>
-          </div> */}
           <div className="col-md-12  C-section web-VF" id="sec-1 w-">
             <div className="Top-L">
               <h5 className="s-head service-font">bright development</h5>
@@ -357,7 +330,21 @@ class Home extends React.Component {
               </h1>
             </div>
             <div className="tx-bg">
-              <img className="img-responsive " src={topBg1} />
+              <img className="mobile-img img-responsive" src={topBg1} />
+              <div className="bg-static">
+                <img
+                  className="img-responsive rellax-2"
+                  src={macbook}
+                  data-rellax-speed="10"
+                  style={{ position: "absolute", top: "26%", left: "10%" }}
+                />
+                <img
+                  className="img-responsive rellax-1"
+                  src={iphone}
+                  data-rellax-speed="2"
+                  style={{ position: "absolute", top: "5%", right: "10%" }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -436,7 +423,10 @@ class Home extends React.Component {
                           </p>
                         </div>
                       </div>
-                      <p className="nxt-tbss">
+                      <p
+                        className="nxt-tbss"
+                        style={{ position: "relative", top: "6%" }}
+                      >
                         <a className="R-MM" href="#">
                           Learn more
                         </a>
@@ -507,8 +497,9 @@ class Home extends React.Component {
                 <div
                   className="row"
                   style={{
-                    background:
-                      "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(200,229,237,1) 52%, rgba(187,223,233,1) 94%)",
+                    /* background:
+                      "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(200,229,237,1) 52%, rgba(187,223,233,1) 94%)", */
+                    background: "rgb(187, 223, 233)",
                     marginTop: "-220px",
                     padding: "30px",
                   }}
@@ -627,32 +618,34 @@ class Home extends React.Component {
 
             <div className="row">
               <div className="col-md-12 tqb-sec-1 C-section p-0">
-                <div className="MD-gap">
+                <div className="MD-gap blue-bg">
                   <div className="row num-count">
-                    <div className="col-lg-3 col-md-3 mb-12-tst  c-tst">
+                    <div className="col-lg-1"></div>
+                    <div className="col-lg-2 col-md-2 mb-12-tst  c-tst">
                       <div className="item-animate">
                         <h2 className="code">0</h2>
                         <h2 className="code-1">Projects done</h2>
                       </div>
                     </div>
-                    <div className="col-lg-3 col-md-3 mb-12-tst c-tst">
+                    <div className="col-lg-auto col-md-auto mb-12-tst c-tst">
                       <div className="item-animate">
                         <h2 className="code_2">0</h2>
                         <h2 className="code-1">Happy Customers</h2>
                       </div>
                     </div>
-                    <div className="col-lg-3 col-md-3 mb-12-tst  c-tst">
+                    <div className="col-lg-2 col-md-2 mb-12-tst  c-tst">
                       <div className="item-animate">
                         <h2 className="code_3">0</h2>
                         <h2 className="code-1">Awards</h2>
                       </div>
                     </div>
-                    <div className="col-lg-3 col-md-3 mb-12-tst  c-tst">
+                    <div className="col-lg-2 col-md-2 mb-12-tst  c-tst">
                       <div className="item-animate">
                         <h2 className="code_4">0</h2>
                         <h2 className="code-1">Employees Worldwide</h2>
                       </div>
                     </div>
+                    <div className="col-lg-2"></div>
                   </div>
                 </div>
               </div>
@@ -820,7 +813,7 @@ class Home extends React.Component {
                     <img className="h-s1" src={arrowWhite} />
                   </div>
                   <span className="F-IMG-2">2020.03.26</span>
-                  <span className="F-IMG-1">
+                  <span className="F-IMG-1 articles">
                     Actionable Guide to Improve Your Content Marketing Game
                   </span>
                   <span className="F-IMG-3">
@@ -841,7 +834,7 @@ class Home extends React.Component {
                     <img className="h-s1" src={arrowWhite} />
                   </div>
                   <span className="F-IMG-2">2020.02.26</span>
-                  <span className="F-IMG-1">
+                  <span className="F-IMG-1 articles">
                     How to Start a Social Media Marketing Agency
                   </span>
                   <span className="F-IMG-3">
@@ -862,7 +855,7 @@ class Home extends React.Component {
                     <img className="h-s1" src={arrowWhite} />
                   </div>
                   <span className="F-IMG-2">2020.01.26</span>
-                  <span className="F-IMG-1">
+                  <span className="F-IMG-1 articles">
                     Tips for Communicating with Clients in 2020
                   </span>
                   <span className="F-IMG-3">
@@ -925,9 +918,9 @@ class Home extends React.Component {
                 <span style={{ fontFamily: "helvetica_neuebold" }}>.</span>
               </span>
             </h2>
-            <Slider />
+            <HomeSlider />
             <p className="S-testi" style={{ left: "85%", marginTop: "-2%" }}>
-              <span className="see-all">See all Testimonial</span>
+              <span className="see-all">See all Testimonials</span>
               <img src={TestimonialArrow} />
             </p>
           </section>
@@ -939,7 +932,10 @@ class Home extends React.Component {
             <section id="footer">
               <div className="col-md-12">
                 <div className="row text-center text-xs-center text-sm-left text-md-left">
-                  <div className="col-xs-12 col-sm-4 col-md-2">
+                  <div
+                    className="col-xs-12 col-sm-4 col-md-2"
+                    style={{ marginLeft: "10px" }}
+                  >
                     <img className="F-logo" src={footerLogo} />
                   </div>
                   <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">

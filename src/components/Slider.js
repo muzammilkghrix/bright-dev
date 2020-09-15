@@ -188,8 +188,8 @@ class SimpleSlider extends React.Component {
                 />
               </div>
               <p className="description">
-                “Bright was a pleasure to work with. Very professional,
-                communicative and super quick with the job.” - www.roanoke.edu
+                Bright was a pleasure to work with. Very professional,
+                communicative and super quick with the job.
               </p>
               <div className="b-tn">
                 <h3 className="title">Lisa Dahi,Executive</h3>
@@ -220,13 +220,13 @@ class SimpleSlider extends React.Component {
                 />
               </div>
               <p className="description">
-                “Bright was a pleasure to work with. Very professional,
+                Bright was a pleasure to work with. Very professional,
                 communicative and super quick with the job.” -
                 www.roanoke.edu“Bright Development was a dream to work with!
                 They were hired to finish a website that they did not start.
                 They truly are the trifecta: knows their stuff, able to
                 communicate clearly and punctual with deadlines. I will
-                definitely work with Bright again.” - www.stillmorellc.com
+                definitely work with Bright again.
               </p>
               <div className="b-tn">
                 <h3 className="title">Lisa Dahi,Executive</h3>
