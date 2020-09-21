@@ -4,7 +4,7 @@ import { TempBody } from "../components/TempBody"
 import { withPrefix } from "gatsby-link"
 /* import "../assets/css/style.css" */
 
-export default ({ location }) => {
+/* export default ({ location }) => {
   if (location.pathname === withPrefix("/home/")) {
     require("../assets/css/style.css")
     require("../assets/fonts/stylesheet.css")
@@ -18,3 +18,5 @@ export default ({ location }) => {
     </Layout>
   )
 }
+ */
+export default () => <h1>Coming soon</h1>

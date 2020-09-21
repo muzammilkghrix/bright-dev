@@ -39,9 +39,9 @@ class Home extends React.Component {
       $(".bg-static").each(function () {
         var windowTop = $(window).scrollTop()
         var elementTop = $(this).offset().top
-        var rightPosition = windowTop - elementTop + 320 //+ 600
+        var rightPosition = windowTop - elementTop + 350 //+ 600
         $(this).find(".rellax-1").css({ right: rightPosition })
-        let leftPosition = windowTop + elementTop - 20
+        let leftPosition = windowTop + elementTop - 130
         $(this).find(".rellax-2").css({ left: leftPosition })
       })
     })

@@ -849,6 +849,7 @@ background-color: initial; */
   object-fit: cover; */
   background-size: cover;
   margin-top: 5px;
+  margin-right: 0px;
 }
 
 @keyframes gradient {
@@ -1933,6 +1934,10 @@ section .section-title {
   }
   .bg-static {
     display: none;
+  }
+  .custm-butt {
+    width: 130px;
+    font-size: 18px;
   }
   .mobile-img {
     display: block;
