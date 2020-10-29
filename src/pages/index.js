@@ -19,23 +19,43 @@ import {
 import HomeSlider from "../components/HomeSlider"
 import Particles from "react-particles-js"
 import $ from "jquery"
-import { Link } from "gatsby"
 import { Scroller } from "../components/Scroller"
-/* import "../assets/css/style-home.css" */
-import Rellax from "rellax"
-/* var rellax = new Rellax(".rellax", {
-  vertical: true,
-})
- */
+
+
+
 class Home extends React.Component {
+  state ={
+    scrollTop : 5,
+    scrollMac : 27
+  }
+  handleScroll = () => {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      console.log(document.getElementsByClassName("child").style)
+      this.setState({
+        scrollTop : 5,
+        scrollMac : 27
+      })
+    } else {
+      console.log(document.getElementsByClassName("child").style)
+      //document.getElementsByClassName("child").style.top = "5%";
+      this.setState({
+        scrollTop : 10,
+        scrollMac : 25
+      })
+    }
+  }
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
   componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
     if (this.props.location.pathname === withPrefix("/")) {
       require("../assets/css/style-home2.css")
       require("../assets/fonts2/stylesheet.css")
     } else {
       console.log("fail")
     }
-    $(window).on("load resize scroll", function () {
+   /*  $(window).on("load resize scroll", function () {
       $(".bg-static").each(function () {
         var windowTop = $(window).scrollTop()
         var elementTop = $(this).offset().top
@@ -44,7 +64,7 @@ class Home extends React.Component {
         let leftPosition = windowTop + elementTop - 130
         $(this).find(".rellax-2").css({ left: leftPosition })
       })
-    })
+    }) */
     $({ countNum: $(".code").html() }).animate(
       { countNum: 2520 },
       {
@@ -106,7 +126,7 @@ class Home extends React.Component {
     )
   }
   render() {
-    return (
+    return (    
       <div
         style={{
           position: "absolute",
@@ -306,6 +326,7 @@ class Home extends React.Component {
           </nav>
           <Scroller />
           <div className="col-md-12  C-section web-VF" id="sec-1 w-">
+          
             <div className="Top-L">
               <h5 className="s-head service-font">bright development</h5>
               <h1 className="h-head">
@@ -329,24 +350,25 @@ class Home extends React.Component {
                 <span style={{ fontFamily: "helvetica_neuebold" }}>.</span>
               </h1>
             </div>
+            <div className="bg-static">
+              <img
+                  className="img-responsive"
+                  src={macbook}
+                  style={{ position: "absolute", top: `${this.state.scrollMac}%`, left: "10%", transition: "1s" }}
+                />
+              
+              <img
+                  className="img-responsive child"
+                  src={iphone}
+                  
+                  style={{ position: "absolute", top: `${this.state.scrollTop}%`, right: "10%", transition: "1s" }}
+                  />
+            </div>
             <div className="tx-bg">
               <img className="mobile-img img-responsive" src={topBg1} />
-              <div className="bg-static">
-                <img
-                  className="img-responsive rellax-2"
-                  src={macbook}
-                  data-rellax-speed="10"
-                  style={{ position: "absolute", top: "26%", left: "10%" }}
-                />
-                <img
-                  className="img-responsive rellax-1"
-                  src={iphone}
-                  data-rellax-speed="2"
-                  style={{ position: "absolute", top: "5%", right: "10%" }}
-                />
-              </div>
             </div>
           </div>
+          
         </div>
         {/*  <!-- Page Content --> */}
         <div className="container-fluid">
@@ -546,13 +568,13 @@ class Home extends React.Component {
                       </div>
                       Hear from our founder
                     </div>
-                    <div className="X-l1">
+                    {/* <div className="X-l1">
                       <div className="plx-s">
                         <img className="px-s1" src={arrow} />
                         <img className="px-s2" src={arrowWhite} />
                       </div>
                       Hear from our founder
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -627,7 +649,7 @@ class Home extends React.Component {
                         <h2 className="code-1">Projects done</h2>
                       </div>
                     </div>
-                    <div className="col-lg-auto col-md-auto mb-12-tst c-tst">
+                    <div className="col-lg-auto col-md-auto mb-12-tst c-tst" style={{marginLeft: "10px"}}>
                       <div className="item-animate">
                         <h2 className="code_2">0</h2>
                         <h2 className="code-1">Happy Customers</h2>
