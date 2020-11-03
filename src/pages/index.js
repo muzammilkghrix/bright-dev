@@ -20,6 +20,9 @@ import HomeSlider from "../components/HomeSlider"
 import Particles from "react-particles-js"
 import $ from "jquery"
 import { Scroller } from "../components/Scroller"
+import { Testimonial } from "../components/Testimonial"
+import { Footer } from "../components/Footer"
+import { Header } from "../components/Header"
 
 
 
@@ -30,14 +33,11 @@ class Home extends React.Component {
   }
   handleScroll = () => {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      console.log(document.getElementsByClassName("child").style)
       this.setState({
         scrollTop : 5,
         scrollMac : 27
       })
     } else {
-      console.log(document.getElementsByClassName("child").style)
-      //document.getElementsByClassName("child").style.top = "5%";
       this.setState({
         scrollTop : 10,
         scrollMac : 25
@@ -51,20 +51,10 @@ class Home extends React.Component {
     window.addEventListener('scroll', this.handleScroll);
     if (this.props.location.pathname === withPrefix("/")) {
       require("../assets/css/style-home2.css")
-      require("../assets/fonts2/stylesheet.css")
+      require("../assets/fonts/stylesheet.css")
     } else {
       console.log("fail")
     }
-   /*  $(window).on("load resize scroll", function () {
-      $(".bg-static").each(function () {
-        var windowTop = $(window).scrollTop()
-        var elementTop = $(this).offset().top
-        var rightPosition = windowTop - elementTop + 350 //+ 600
-        $(this).find(".rellax-1").css({ right: rightPosition })
-        let leftPosition = windowTop + elementTop - 130
-        $(this).find(".rellax-2").css({ left: leftPosition })
-      })
-    }) */
     $({ countNum: $(".code").html() }).animate(
       { countNum: 2520 },
       {
@@ -264,66 +254,7 @@ class Home extends React.Component {
         />
         {/* <!-- Navigation --> */}
         <div className="top-sec-new" id="section-one">
-          <nav className="navbar navbar-expand-lg navbar-dark ">
-            <div className="container-fluid">
-              <img className="logo-img" src={logo} alt="logo" />
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#collapsibleNavbar1"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div
-                className="f12 collapse navbar-collapse"
-                id="collapsibleNavbar1"
-              >
-                <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <a className="nav-link nav-link-1 active" href="#">
-                      Welcome
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link nav-link-1" href="#">
-                      Work
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link nav-link-1" href="#">
-                      Services
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link nav-link-1" href="#">
-                      Resources
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link nav-link-1" href="#">
-                      People
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link nav-link-1" href="#">
-                      Join
-                    </a>
-                  </li>
-                </ul>
-                <div className="ipad mobi-v">
-                  <div className="header-module">
-                    <button className="custm-butt">Contact Us</button>
-                  </div>
-                </div>
-              </div>
-              <div className="ipad web-v">
-                <div className="header-module">
-                  <button className="custm-butt">Contact Us</button>
-                </div>
-              </div>
-            </div>
-          </nav>
+          <Header />
           <Scroller />
           <div className="col-md-12  C-section web-VF" id="sec-1 w-">
           
@@ -898,202 +829,13 @@ class Home extends React.Component {
             </p>
           </section>
           <section className="top-sec-N" id="section-seven">
-            <div className="row serch-sec">
-              <div className="sec-1 col-md-12">
-                <div className="left-col-1">
-                  <h2 className="lqd-highlight-underline lqd-highlight-grow-left">
-                    <span className="ld-fh-txt"> Start Now</span>
-                  </h2>
-                  <h5
-                    style={{ color: "#ffffff", textAlign: "left" }}
-                    className="vc_custom_heading vc_custom_1595842755130"
-                  >
-                    Get a project estimation.
-                  </h5>
-                </div>
-                <div className="right-col-1">
-                  <div className="ld_sf_paragraph">
-                    <div className="input-group mb-3">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter your email..."
-                        id="mail"
-                        name="email"
-                      />
-                      <div className="input-group-append">
-                        <span className="input-group-text">Continue</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h2 className="tabs-h tabs-heading-1 testimonial-heading">
-              <span style={{ fontFamily: "helvetica_neueregular" }}>
-                Testimonials{" "}
-              </span>
-              <span className="trust-text">
-                from our
-                <br />
-                trusted clients
-                <span style={{ fontFamily: "helvetica_neuebold" }}>.</span>
-              </span>
-            </h2>
-            <HomeSlider />
-            <p className="S-testi" style={{ left: "85%", marginTop: "-2%" }}>
-              <span className="see-all">See all Testimonials</span>
-              <img src={TestimonialArrow} />
-            </p>
+            <Testimonial />
           </section>
         </div>
-        {/* <!-- /.container --> */}
+      
         {/*  <!-- Footer --> */}
-        <section className="top-sec-N" id="section-eight">
-          <div className="jumbotron text-center" style={{ marginBottom: "0" }}>
-            <section id="footer">
-              <div className="col-md-12">
-                <div className="row text-center text-xs-center text-sm-left text-md-left">
-                  <div
-                    className="col-xs-12 col-sm-4 col-md-2"
-                    style={{ marginLeft: "10px" }}
-                  >
-                    <img className="F-logo" src={footerLogo} />
-                  </div>
-                  <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
-                    <h5>Welcome</h5>
-                    <ul className="list-unstyled quick-links">
-                      <li>
-                        <a href="#">Home</a>
-                      </li>
-                      <li>
-                        <a href="#">About</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
-                    <h5>Work</h5>
-                    <ul className="list-unstyled quick-links">
-                      <li>
-                        <a href="#">Industry</a>
-                      </li>
-                      <li>
-                        <a href="#">Industry</a>
-                      </li>
-                      <li>
-                        <a href="#">Industry</a>
-                      </li>
-                      <li>
-                        <a href="#">Industry</a>
-                      </li>
-                      <li>
-                        <a href="#">Industry</a>
-                      </li>
-                      <li>
-                        <a href="#">Industry</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
-                    <h5>Resources</h5>
-                    <ul className="list-unstyled quick-links">
-                      <li>
-                        <a href="#">SEO</a>
-                      </li>
-                      <li>
-                        <a href="#">SEO</a>
-                      </li>
-                      <li>
-                        <a href="#">SEO</a>
-                      </li>
-                      <li>
-                        <a href="#">SEO</a>
-                      </li>
-                      <li>
-                        <a href="#">SEO</a>
-                      </li>
-                      <li>
-                        <a href="#">SEO</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
-                    <h5>Peoples</h5>
-                    <ul className="list-unstyled quick-links">
-                      <li>
-                        <a href="#">Leadership</a>
-                      </li>
-                      <li>
-                        <a href="#">our values</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
-                    <h5>Join</h5>
-                    <ul className="list-unstyled quick-links">
-                      <li>
-                        <a href="#">Opportunities</a>
-                      </li>
-                      <li>
-                        <a href="#">internship</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-xs-12 col-sm-4 col-md-2 custom-dix">
-                    <h5>Contact</h5>
-                    <ul className="list-unstyled quick-links">
-                      <li>
-                        <a href="#">Hours</a>
-                      </li>
-                      <li>
-                        <a href="#">9am to 5pm EST</a>
-                      </li>
-                      <li>
-                        <a href="#">Monday to Saturday</a>
-                      </li>
-                      <ul className="list-unstyled quick-links">
-                        <h5
-                          style={{
-                            marginBottom: "0px",
-                            paddingBottom: "0px",
-                            marginTop: "20px",
-                          }}
-                        >
-                          Social
-                        </h5>
-                        <li>
-                          <a href="#">Instagram</a>
-                        </li>
-                        <li>
-                          <a href="#">Facebook</a>
-                        </li>
-                      </ul>
-                    </ul>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2  text-white">
-                    <p>
-                      <u style={{ textDecoration: "none" }}>
-                        <a href="#">
-                          ©2020 Bright Development LLC. All Rights Reserved.
-                          666th Street, Nowwhere, NW 11111
-                        </a>
-                      </u>
-                    </p>
-                    <p className="h6">
-                      <span className="t-c">
-                        <a href="#"></a>Terms and Conditions
-                      </span>
-                      <span className="t-c">Privacy policy</span>
-                    </p>
-                  </div>
-                  <hr />
-                </div>
-              </div>
-            </section>
-          </div>
-        </section>
+          <Footer />
+        
       </div>
     )
   }

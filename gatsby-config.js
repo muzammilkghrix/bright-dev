@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/img`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-plugin-netlify-cache`,
@@ -44,7 +44,7 @@ module.exports = {
         // this example is for wp-graphql-gutenberg.
         // since we can get block data on the `block` field
         // we don't need these fields
-        excludeFieldNames: [`blocksJSON`, `saveContent`],
+        //excludeFieldNames: [`blocksJSON`, `saveContent`],
         type: {
           Post: {
             limit:

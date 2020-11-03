@@ -287,6 +287,10 @@ span.F-IMG-1 {
 .F-IMG-1.articles {
   padding-bottom: 45px;
 }
+.F-IMG-1.resources {
+  padding-bottom: 45px;
+}
+
 
 .t-1 {
   position: absolute;
@@ -2068,7 +2072,7 @@ section .section-title {
 
 @media only screen and (min-width: 600px) and (max-width: 765px) {
   .top-pllx {
-    margin-top: -54em;
+    margin-top: -56em;
   }
 
   .bottom-pllx {
@@ -2076,4 +2080,50 @@ section .section-title {
   }
 }
 
+@media (min-width:769px) and (max-width:1150px){
+
+
+  .row.num-count .col-lg-1 {
+      display: none;
+  }
+  .row.num-count .col-lg-2:last-child {
+      display: none;
+  }
+  .row.num-count {
+      margin: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+  
+  .row.num-count .mb-12-tst {
+      width: 23%;
+      min-width: 23%;
+      max-width: 23%;
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  
+  .row.num-count .mb-12-tst:nth-of-type(3) {
+      width: 28%;
+      min-width: 28%;
+      max-width: 28%;
+  }
+  
+  .row.num-count .mb-12-tst:nth-of-type(4) {
+      width: 16%;
+      min-width: 16%;
+      max-width: 16%;
+  }
+  
+  .row.num-count .mb-12-tst:nth-of-type(5) {
+      width: 33%;
+      min-width: 33%;
+      max-width: 33%;
+  }
+  
+  .row.num-count .mb-12-tst .code, .row.num-count .mb-12-tst .code_2, .row.num-count .mb-12-tst .code_3, .row.num-count .mb-12-tst .code_4 {
+      font-size: 42px !important;
+  }
+  
+  }
 /* END ALL MEDIA QURIES */

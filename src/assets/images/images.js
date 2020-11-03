@@ -32,6 +32,14 @@ import shutterstock from "./shutterstock.jpg"
 import TestimonialArrow from "./testi-arrow-removebg-preview.png"
 import topBg from "./top-bgg.png"
 import topBg1 from "./top-bgg-1.png"
+import projectArrowLeft from "./project-arrow-left.jpg"
+import projectArrowRight from "./project-arrow-right.jpg"
+import rightArrow2 from "./rightarrow.jpg"
+import caseStudyImg1 from "./work-inr-img1.jpg"
+import caseStudyImg2 from "./work-inr-img2.jpg"
+import caseStudyImg3 from "./work-inr-img3.jpg"
+import caseStudyTopLeft from "./wrk-inr-top-lft.jpg"
+import demoRightImg from "./demo-right-img.jpg"
 
 export {
   logo,
@@ -63,4 +71,12 @@ export {
   TestimonialArrow,
   topBg,
   topBg1,
+  projectArrowLeft,
+  projectArrowRight,
+  rightArrow2,
+  caseStudyImg1,
+  caseStudyImg2,
+  caseStudyImg3,
+  caseStudyTopLeft,
+  demoRightImg,
 }

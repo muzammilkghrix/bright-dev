@@ -1,21 +1,22 @@
 import React from "react"
 import { Header } from "./Header"
 import { Footer } from "./Footer"
-import { TempBody } from "./TempBody"
 import { Helmet } from "react-helmet"
+import { Testimonial } from "./Testimonial"
+import '../assets/css/style-home2.css'
+import '../assets/fonts/stylesheet.css'
 
 export const Layout = ({ children }) => {
   return (
-    <div>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-      </Helmet>
-      <Header />
-      {children}
-      <Footer />
-    </div>
+    <>
+      <div className="resource-main" id="">
+        <div className="resource-inner" id="">
+          <Header />
+            {children}
+          <Testimonial />
+          <Footer />
+        </div>
+      </div>
+    </>
   )
 }

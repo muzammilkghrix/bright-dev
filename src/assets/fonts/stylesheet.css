@@ -32,3 +32,25 @@
     font-style: normal;
 
 }
+
+
+
+@font-face {
+    font-family: 'sofia_prosemibold';
+    src: url('sofia_pro_semibold-webfont.woff2') format('woff2'),
+         url('sofia_pro_semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'helvetica_neueregular';
+    src: url('helvetica-85-heavy-webfont.woff2') format('woff2'),
+         url('helvetica-85-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
